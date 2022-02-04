@@ -1,5 +1,6 @@
 import javax.security.auth.login.LoginException;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 
@@ -22,9 +23,10 @@ public class DiscordBot {
         }
     }
     public DiscordBot() throws LoginException {
+        Dotenv dotenv = Dotenv.load();
 
         INSTANCE = this;
-        JDABuilder builder = JDABuilder.createDefault("NzIyNzM2Mjc3MjgzMTQzNzQw.XunanA._u809k145iuNw-dVzADjPfNIWOU");
+        JDABuilder builder = JDABuilder.createDefault(dotenv.get("BOT_TOKEN"));
 
 
         builder.setStatus(OnlineStatus.ONLINE);
