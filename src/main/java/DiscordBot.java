@@ -26,7 +26,8 @@ public class DiscordBot {
         Dotenv dotenv = Dotenv.load();
 
         INSTANCE = this;
-        JDABuilder builder = JDABuilder.createDefault(dotenv.get("BOT_TOKEN"));
+        System.out.println(dotenv.get("BOT_TOKEN"));
+        JDABuilder builder = JDABuilder.createDefault(dotenv.get("BOT_TOKEN").toString());
 
 
         builder.setStatus(OnlineStatus.ONLINE);
