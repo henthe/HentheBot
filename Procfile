@@ -1,1 +1,1 @@
-web: java -jar -cp \target\DCBot-1.0-SNAPSHOT.jar src.DiscordBot.main
+worker: java -jar -cp \target\DCBot-1.0-SNAPSHOT.jar src.DiscordBot.main
