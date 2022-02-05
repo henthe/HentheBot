@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar web/target/dependency/webapp-runner.jar --port $PORT web/target/*.war
+web: java -jar -cp \target\DCBot-1.0-SNAPSHOT.jar src.DiscordBot.main

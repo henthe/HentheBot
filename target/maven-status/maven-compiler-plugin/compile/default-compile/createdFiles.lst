@@ -1,0 +1,5 @@
+ServerCommand.class
+StubsCommand.class
+CommandListener.class
+DiscordBot.class
+CommandManager.class
